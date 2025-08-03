@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產品展示</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/Logo.jpg" alt="遇餞臻品Logo" class="logo" id="logo">
+        </div>
+        <h1>蜜餞×自然果香 × 優雅選物
+        與你分享質感生活的每一天。</h1>
+        <p>歡迎瀏覽我們的產品展示頁面</p>
+    </header>
+
+    <main>
+        <section class="category-filter">
+            <h2>產品分類</h2>
+            <div class="category-control">
+                <div class="category-toggle">
+                    <label class="toggle-label">
+                        <input type="checkbox" id="use-subcategory">
+                        <span class="toggle-text">使用小分類</span>
+                    </label>
+                </div>
+            </div>
+            <div class="filter-buttons" id="category-buttons">
+                <!-- 主分類按鈕將通過JavaScript動態加載 -->
+            </div>
+            <div class="filter-buttons" id="subcategory-buttons" style="display: none;">
+                <!-- 小分類按鈕將通過JavaScript動態加載 -->
+            </div>
+        </section>
+        
+        <section class="image-size-control">
+            <h2>圖片大小</h2>
+            <div class="size-buttons" id="size-buttons">
+                <button class="size-button" data-size="small">小</button>
+                <button class="size-button active" data-size="medium">中</button>
+                <button class="size-button" data-size="large">大</button>
+            </div>
+        </section>
+        <section class="product-container" id="product-list">
+            <!-- 產品將通過JavaScript動態加載 -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 遇餞臻品. 版權所有.</p>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

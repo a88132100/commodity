@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #4a6fa5;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.category-filter {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.category-filter h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.category-control {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.category-toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle-label input[type="checkbox"] {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.toggle-text {
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.filter-button {
+    padding: 0.5rem 1rem;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: #d0d0d0;
+}
+
+.filter-button.active {
+    background-color: #4a6fa5;
+    color: white;
+}
+
+/* 圖片尺寸控制樣式 */
+.image-size-control {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.image-size-control h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.size-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.size-button {
+    padding: 0.5rem 1rem;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.size-button:hover {
+    background-color: #d0d0d0;
+}
+
+.size-button.active {
+    background-color: #4a6fa5;
+    color: white;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* 改為contain以保持圖片原始比例 */
+    background-color: #f9f9f9; /* 添加背景色以便於區分圖片邊界 */
+    transition: all 0.3s ease;
+}
+
+/* 不同尺寸的產品圖片選項 */
+.product-image.small {
+    height: 150px;
+}
+
+.product-image.medium {
+    height: 200px;
+}
+
+.product-image.large {
+    height: 250px;
+}
+
+/* 圖片懸停效果 */
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.product-description {
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+}
+
+.product-category {
+    font-size: 0.9rem;
+    color: #4a6fa5;
+    font-weight: bold;
+}
+
+.product-details {
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px dashed #e0e0e0;
+}
+
+.product-weight, .product-price {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+    color: #555;
+}
+
+.product-discount {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 0.5rem 0 0 0;
+    background-color: #ffeaa7;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.no-products {
+    text-align: center;
+    padding: 2rem;
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .product-container {
+        gap: 1rem;
+    }
+    
+    .product-card {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+    }
+}
