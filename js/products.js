@@ -280,6 +280,7 @@ const products = [
         mainCategory: '3C',
         subCategory: '電風扇',  // 添加小分類
         weight: '224g',         // 添加重量信息
+        price: 399,          // 添加價格信息
         price: 399,             // 添加價格信息
     },
     {
