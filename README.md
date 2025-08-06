@@ -53,3 +53,42 @@
 
 - 要更改網站的顏色和樣式，請編輯 `css/style.css` 文件
 - 要更改網站的標題和頁腳信息，請編輯 `index.html` 文件
+
+## 如何將修改同步到GitHub
+
+當您對代碼進行修改後，可以按照以下步驟將修改同步到GitHub：
+
+1. 打開終端（命令提示符或PowerShell）
+2. 導航到項目目錄：
+   ```
+   cd 您的項目路徑
+   ```
+3. 添加所有修改的文件到暫存區：
+   ```
+   git add .
+   ```
+4. 提交您的修改（添加描述性的提交信息）：
+   ```
+   git commit -m "描述您所做的修改"
+   ```
+5. 將修改推送到GitHub：
+   ```
+   git push origin main
+   ```
+
+如果您是首次設置，請確保已經：
+
+1. 在GitHub上創建了儲存庫
+2. 在本地初始化Git儲存庫：
+   ```
+   git init
+   ```
+3. 設置遠端儲存庫URL：
+   ```
+   git remote add origin https://github.com/您的用戶名/儲存庫名.git
+   ```
+4. 設置您的Git用戶信息：
+   ```
+   git config --global user.name "您的名字"
+   git config --global user.email "您的郵箱"
+   ```
