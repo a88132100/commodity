@@ -95,7 +95,7 @@ const products = [
         image: 'images/51956_0.jpg',
         mainCategory: '蜜餞',
         subCategory: '梅子',  // 添加小分類
-        weight: '200g',         // 添加重量信息
+        weight: '180g',         // 添加重量信息
         price: 100,             // 添加價格信息
         discount: '買五送一'     // 添加優惠信息
     },
@@ -128,7 +128,7 @@ const products = [
         image: 'images/51945_0.jpg',
         mainCategory: '蜜餞',
         subCategory: '梅子',  // 添加小分類
-        weight: '180g',         // 添加重量信息
+        weight: '170g',         // 添加重量信息
         price: 100,             // 添加價格信息
         discount: '買五送一'     // 添加優惠信息
     },
@@ -139,7 +139,7 @@ const products = [
         image: 'images/51946_0.jpg',
         mainCategory: '蜜餞',
         subCategory: '李子',  // 添加小分類
-        weight: '180g',         // 添加重量信息
+        weight: '170g',         // 添加重量信息
         price: 100,             // 添加價格信息
         discount: '買五送一'     // 添加優惠信息
     },
@@ -161,7 +161,7 @@ const products = [
         image: 'images/52003_0.jpg',
         mainCategory: '蜜餞',
         subCategory: '橄欖',  // 添加小分類
-        weight: '180g',         // 添加重量信息
+        weight: '170g',         // 添加重量信息
         price: 100,             // 添加價格信息
         discount: '買五送一'     // 添加優惠信息
     },
@@ -172,7 +172,7 @@ const products = [
         image: 'images/52002_0.jpg',
         mainCategory: '蜜餞',
         subCategory: '橄欖',  // 添加小分類
-        weight: '170g',         // 添加重量信息
+        weight: '160g',         // 添加重量信息
         price: 100,             // 添加價格信息
         discount: '買五送一'     // 添加優惠信息
     },
@@ -205,7 +205,7 @@ const products = [
         image: 'images/51948_0.jpg',
         mainCategory: '蜜餞',
         subCategory: '其他',  // 添加小分類
-        weight: '180g',         // 添加重量信息
+        weight: '160g',         // 添加重量信息
         price: 100,             // 添加價格信息
         discount: '買五送一'     // 添加優惠信息
     },
@@ -238,7 +238,7 @@ const products = [
         image: 'images/52027_0.jpg',
         mainCategory: '蜜餞',
         subCategory: '其他',  // 添加小分類
-        weight: '180g',         // 添加重量信息
+        weight: '150g',         // 添加重量信息
         price: 100,             // 添加價格信息
         discount: '買5送1'     // 添加優惠信息
     },
@@ -349,7 +349,7 @@ const products = [
         image: 'images/51936_0.jpg',
         mainCategory: '其他',
         subCategory: '乾燥蔬果',  // 添加小分類
-        weight: '70g',         // 添加重量信息
+        weight: '60g',         // 添加重量信息
         price: 100,             // 添加價格信息
         discount: '買五送一'     // 添加優惠信息
     },
@@ -360,7 +360,7 @@ const products = [
         image: 'images/52005_0.jpg',
         mainCategory: '其他',
         subCategory: '乾燥蔬果',  // 添加小分類
-        weight: '200g',         // 添加重量信息
+        weight: '180g',         // 添加重量信息
         price: 100,             // 添加價格信息
         discount: '買五送一'     // 添加優惠信息
     },
@@ -371,7 +371,7 @@ const products = [
         image: 'images/51934_0.jpg',
         mainCategory: '其他',
         subCategory: '乾燥蔬果',  // 添加小分類
-        weight: '100g',         // 添加重量信息
+        weight: '700g',         // 添加重量信息
         price: 100,             // 添加價格信息
         discount: '買五送一'     // 添加優惠信息
     },
@@ -404,7 +404,7 @@ const products = [
         image: 'images/51152_0.jpg',
         mainCategory: '其他',
         subCategory: '花茶',  // 添加小分類
-        weight: '60g',         // 添加重量信息
+        weight: '50g',         // 添加重量信息
         price: 100,             // 添加價格信息
         discount: '買五送一'     // 添加優惠信息
     },
@@ -415,7 +415,7 @@ const products = [
         image: 'images/51935_0.jpg',
         mainCategory: '其他',
         subCategory: '花茶',  // 添加小分類
-        weight: '50g',         // 添加重量信息
+        weight: '40g',         // 添加重量信息
         price: 100,             // 添加價格信息
         discount: '買五送一'     // 添加優惠信息
     },
@@ -470,8 +470,8 @@ const products = [
         image: 'images/52036_0.jpg',
         mainCategory: '其他',
         subCategory: '豆干',  // 添加小分類
-        weight: '140g',         // 添加重量信息
-        price: 60,             // 添加價格信息
+        weight: '250g',         // 添加重量信息
+        price: 100,             // 添加價格信息
         discount: '2包100'     // 添加優惠信息
     },
     {
@@ -518,6 +518,26 @@ const products = [
         price: 600,             // 添加價格信息
         discount: '2包只要$1100!'     // 添加優惠信息
     },
+    {
+        id: 49,
+        name: '香酥白帶魚',
+        description: '香酥白帶魚，嚴選新鮮白帶魚酥炸製成，外皮金黃酥脆、魚肉鮮香扎實。開袋即食，無論配茶、下酒或追劇解饞都很對味。',
+        image: 'images/52037_0.jpg',
+        mainCategory: '海之味',
+        weight: '80g',         // 添加重量信息
+        price: 100,             // 添加價格信息
+        discount: '買五送一'     // 添加優惠信息
+    },
+    {
+        id: 50,
+        name: '椒鹽黃魚酥',
+        description: '香酥小黃魚，嚴選鮮嫩小黃魚酥炸製成，外皮酥香、魚肉細緻鮮美。開袋即食，無論配茶、下酒或當作日常零嘴都非常適合。',
+        image: 'images/52038_0.jpg',
+        mainCategory: '海之味',
+        weight: '80g',         // 添加重量信息
+        price: 100,             // 添加價格信息
+        discount: '買五送一'     // 添加優惠信息
+    }
 
     
 ];
