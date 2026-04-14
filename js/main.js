@@ -5,13 +5,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryButtons = document.getElementById('category-buttons');
     const subcategoryButtons = document.getElementById('subcategory-buttons');
     const sizeButtons = document.getElementById('size-buttons');
-    const useSubcategoryCheckbox = document.getElementById('use-subcategory');
     
     // 當前選中的分類、小分類和圖片尺寸
     let currentMainCategory = 'all';
     let currentSubCategory = 'all';
     let currentImageSize = 'medium'; // 預設為中等尺寸
     let useSubcategory = false; // 預設不使用小分類
+
+    // 統一控制「使用小分類」的狀態與畫面（避免多處邏輯分散）
+    function setUseSubcategory(nextValue) {
+        useSubcategory = Boolean(nextValue);
+
+        // 顯示或隱藏小分類按鈕
+        if (useSubcategory) {
+            subcategoryButtons.style.display = 'flex';
+            createSubCategoryButtons();
+        } else {
+            subcategoryButtons.style.display = 'none';
+            currentSubCategory = 'all'; // 重置小分類選擇
+        }
+    }
     
     // 創建主分類按鈕
     function createMainCategoryButtons() {
@@ -45,10 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 更新主分類按鈕狀態
                 mainFilterButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
-                
-                // 如果使用小分類，則更新小分類按鈕
-                if (useSubcategory) {
-                    createSubCategoryButtons();
+
+                // 需求：點擊主分類時，自動展開小分類（不用另外勾選「使用小分類」）
+                // - 點到「全部」時，不強制開啟小分類（避免畫面出現無意義的小分類列）
+                if (currentMainCategory !== 'all' && hasSubCategories) {
+                    setUseSubcategory(true);
+                } else {
+                    // 回到「全部」時關閉小分類列，並重置小分類
+                    setUseSubcategory(false);
                 }
                 
                 // 重新渲染產品列表
@@ -96,23 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-    
-    // 為使用小分類的複選框添加事件監聽器
-    useSubcategoryCheckbox.addEventListener('change', () => {
-        useSubcategory = useSubcategoryCheckbox.checked;
-        
-        // 顯示或隱藏小分類按鈕
-        if (useSubcategory) {
-            subcategoryButtons.style.display = 'flex';
-            createSubCategoryButtons();
-        } else {
-            subcategoryButtons.style.display = 'none';
-            currentSubCategory = 'all'; // 重置小分類選擇
-        }
-        
-        // 重新渲染產品列表
-        renderProducts();
-    });
     
     // 渲染產品列表函數
     function renderProducts() {
@@ -195,14 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // 初始渲染產品列表
         renderProducts();
-        
-        // 如果產品有小分類，則啟用小分類複選框
-        if (hasSubCategories) {
-            useSubcategoryCheckbox.disabled = false;
-        } else {
-            useSubcategoryCheckbox.disabled = true;
-            useSubcategoryCheckbox.title = "沒有可用的小分類";
-        }
     }
     
     // 調用初始化函數
