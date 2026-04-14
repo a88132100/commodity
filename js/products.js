@@ -150,7 +150,7 @@ const products = [
         image: 'images/51952_0.jpg',
         mainCategory: '蜜餞',
         subCategory: '李子',  // 添加小分類
-        weight: '200g',         // 添加重量信息
+        weight: '170g',         // 添加重量信息
         price: 100,             // 添加價格信息
         discount: '買五送一'     // 添加優惠信息
     },
@@ -371,7 +371,7 @@ const products = [
         image: 'images/51934_0.jpg',
         mainCategory: '其他',
         subCategory: '乾燥蔬果',  // 添加小分類
-        weight: '700g',         // 添加重量信息
+        weight: '70g',         // 添加重量信息
         price: 100,             // 添加價格信息
         discount: '買五送一'     // 添加優惠信息
     },
@@ -472,7 +472,7 @@ const products = [
         subCategory: '豆干',  // 添加小分類
         weight: '250g',         // 添加重量信息
         price: 100,             // 添加價格信息
-        discount: '2包100'     // 添加優惠信息
+        // discount: '2包100'     // 添加優惠信息
     },
     {
         id: 45,
