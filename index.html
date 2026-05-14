@@ -3,45 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>產品展示</title>
+    <title>遇餞臻品｜商品介紹</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="images/Logo.jpg" alt="遇餞臻品Logo" class="logo" id="logo">
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand-block">
+                <img src="images/Logo.jpg" alt="遇餞臻品 Logo" class="brand-logo">
+                <div>
+                    <p class="brand-kicker">日常好物・溫暖選品</p>
+                    <h1>遇餞臻品</h1>
+                    <p class="brand-copy">把好吃、好用、值得分享的小東西整理成一間親切的小店。</p>
+                </div>
+            </div>
         </div>
-        <h1>蜜餞×自然果香 × 優雅選物
-        與你分享質感生活的每一天。</h1>
-        <p>歡迎瀏覽我們的產品展示頁面</p>
     </header>
 
     <main>
-        <section class="category-filter">
-            <h2>產品分類</h2>
-            <div class="filter-buttons" id="category-buttons">
-                <!-- 主分類按鈕將通過JavaScript動態加載 -->
+        <section class="toolbar" aria-label="商品篩選">
+            <div class="toolbar-group">
+                <div class="section-heading">
+                    <span>分類</span>
+                    <h2>慢慢逛，找到喜歡的好物</h2>
+                </div>
+                <div class="filter-buttons" id="category-buttons"></div>
+                <div class="filter-buttons subcategory-row" id="subcategory-buttons" hidden></div>
             </div>
-            <div class="filter-buttons" id="subcategory-buttons" style="display: none;">
-                <!-- 小分類按鈕將通過JavaScript動態加載 -->
+
+            <div class="toolbar-group size-panel">
+                <div class="section-heading">
+                    <span>圖片大小</span>
+                    <h2>瀏覽模式</h2>
+                </div>
+                <div class="size-buttons" id="size-buttons">
+                    <button class="size-button" data-size="small" type="button">精簡</button>
+                    <button class="size-button" data-size="medium" type="button">標準</button>
+                    <button class="size-button active" data-size="large" type="button">大圖</button>
+                </div>
             </div>
         </section>
-        
-        <section class="image-size-control">
-            <h2>圖片大小</h2>
-            <div class="size-buttons" id="size-buttons">
-                <button class="size-button" data-size="small">小</button>
-                <button class="size-button active" data-size="medium">中</button>
-                <button class="size-button" data-size="large">大</button>
-            </div>
-        </section>
-        <section class="product-container" id="product-list">
-            <!-- 產品將通過JavaScript動態加載 -->
-        </section>
+
+        <section class="product-container large-layout" id="product-list" aria-live="polite"></section>
     </main>
 
-    <footer>
-        <p>&copy; 遇餞臻品. 版權所有.</p>
+    <footer class="site-footer">
+        <p>遇餞臻品｜商品介紹</p>
     </footer>
 
     <script src="js/products.js"></script>
